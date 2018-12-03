@@ -89,8 +89,7 @@ __8.  GPU numbers(Training)__  : (option)--num_gpus --> default is 1, INTEGER(N 
 __9.  epoch for training__     : (option)--num_epochs --> 5,10,50,10,200 \
 __10. Depth for ResNet__       : (option)--depth --> default is 50 (can change to 50,101)\
 __11. Log(validation/testing)__: (option)--log_dir --> "googlenet_Run-02-12-2018-15:40:00"\
-__12. Save prections__         : (option)--save_predictions --> "predictions.csv" (default) (can specify other file name)
-                               : Save top-n predictions of the networks along with their confidence in the specified file\
+__12. Save prections__         : (option)--save_predictions --> "predictions.csv" (default) (can specify other file name). Save top-n predictions of the networks along with their confidence in the specified file\
 __13. Weight decay policy__    : (option)--WD_policy --> (constant, piecewise_linear(default), exponential) \
 __14. WD change details__      : (option)--WD_details --> (30, 0.0005, 0.0)(default)\
 __15. Batch size__             : (option)--batch_size --> 128 (default) (can specify other value)\
@@ -104,12 +103,10 @@ __21. Maximum snapshot__       : (option)--max_to_keep --> 5(default) (Specify M
 
 **************************
 **Scripts:**\
-__1. run.py__          : Main python script for DNN, A program to apply different well-known deep learning architectures.\
-                       : Ties all scripts together & performs training, validation,& testing of DNN using all                                        scripts/functions\
+__1. run.py__          : Main python script for DNN, A program to apply different well-known deep learning architectures.Ties all scripts together & performs training, validation,& testing of DNN using all scripts/functions\
 __2. data_loader.py__  : Performs data loading using given text files and prepares data for model training. \
-__3. utils.py__        : Utility class for computing averages of loss and accuracies, getting batches for each epoch.\
-                       : Determines learning rate policy and optimization algorithm type as per arguments.\
-__4. common.py__       : helper function file for each model training (Contains functions/methods for batch normalization,                          : flatten, max pool, avg pool, fully connected, spatial Convolution etc.)\
+__3. utils.py__        : Utility class for computing averages of loss and accuracies, getting batches for each epoch. Determines learning rate policy and optimization algorithm type as per arguments.\
+__4. common.py__       : helper function file for each model training (Contains functions/methods for batch normalization,flatten, max pool, avg pool, fully connected, spatial Convolution etc.)\
 __5. model.py__        : Helper file with necessary methods/functions for simulating model building, training & validation.\
 __6. alexnet.py__      : Alexnet(Caffenet) Implementation (Deep Convolution Network architecture)\
 __7. googlenet.py__    : GoogleNet Implementation (Deep Convolution Network architecture) \
