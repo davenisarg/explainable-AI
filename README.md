@@ -1,6 +1,6 @@
-# [Explainable AI for Understanding Decisions & Data-Driven Optimization in Deep Neural Networks](https://www.researchgate.net/publication/326586154_Explainable_AI_for_Understanding_Decisions_and_Data-Driven_Optimization_of_the_Choquet_Integral)\
+# [Explainable AI for Understanding Decisions & Data-Driven Optimization in Deep Neural Networks](https://www.researchgate.net/publication/326586154_Explainable_AI_for_Understanding_Decisions_and_Data-Driven_Optimization_of_the_Choquet_Integral)
 
-## PART 1: Building Deep Neural Networks on [ImageNet](http://www.image-net.org/) \
+## PART 1: Building Deep Neural Networks on [ImageNet](http://www.image-net.org/) 
 Repository contains code for training different architectures of image classification (i.e. [GoogleNet](https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf), [ResNet-50 & 101](https://arxiv.org/abs/1512.03385), [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) etc.) on ImageNet(Orginal) dataset.
 
 **************************
