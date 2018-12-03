@@ -1,17 +1,17 @@
 # [Explainable AI for Understanding Decisions & Data-Driven Optimization in Deep Neural Networks](https://www.researchgate.net/publication/326586154_Explainable_AI_for_Understanding_Decisions_and_Data-Driven_Optimization_of_the_Choquet_Integral)
 
-## PART 1: Building Deep Neural Networks on [ImageNet](http://www.image-net.org/) 
+## PART 1: Building [Deep Neural Networks](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks) on [ImageNet](http://www.image-net.org/) 
 Repository contains code for training different architectures of image classification (i.e. [GoogleNet](https://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf), [ResNet-50 & 101](https://arxiv.org/abs/1512.03385), [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) etc.) on ImageNet(Orginal) dataset.
 
 **************************
-**Features:**\
-1. The code reads dataset information from a text or csv file and directly loads images from disk.\
-2. Code Utilizes the __GPU parellelization__ during training phase.\
-3. Code is built for running on __[High-Performance Computing(Super Computing) Infrastructure](https://en.wikipedia.org/wiki/Supercomputer)__.\
-4. Completely designed, by performing all necessary validation checks.\
-5. Compatible with both Python 2.7 and Python 3.6\
+**Features:**
+1. The code reads dataset information from a text or csv file and directly loads images from disk.
+2. Code Utilizes the __GPU parellelization__ during training phase.
+3. Code is built for running on __[High-Performance Computing(Super Computing) Infrastructure](https://en.wikipedia.org/wiki/Supercomputer)__.
+4. Completely designed, by performing all necessary validation checks.
+5. Compatible with both Python 2.7 and Python 3.6
 6. Code has personalization for selecting optimization algorithm, learning rate and weight decay policies\
-7. Code can build various architectures in optimized manner\
+7. Code can build various architectures in optimized manner
 8. Code Supports full automation for training, validation and testing phase.
 **************************
 
@@ -78,42 +78,42 @@ python run.py inference --architecture googlenet --log_dir "googlenet_Run-02-12-
 
 **************************
 **Customization options:**\
-1.  Deep neural networks   : (option)--architecture --> (possible values)  googlenet and resnet 
-2.  Execution methods      : train (for training), eval (for validating), inference (for testing) 
-3.  dataset path prefix    : (option)--path_prefix  --> ${HOME}/path-to-dataset-folder 
-4.  Train/validation info  : (option)--train_info train.txt and (option)--val_info val.txt 
-5.  Optimizer for DNN      : (option)--optimizer --> (momentum(default), adam, adadelta, adagrad, rmsprop, sgd) 
-6.  learning rate policy   : (option)--policy_type --> (constant, piecewise_linear(default), exponential) 
-7.  LR Change detials      : (option)--LR_details --> (19, 30, 44, 53, 0.01, 0.005, 0.001, 0.0005, 0.0001)(default)
-8.  GPU numbers(Training)  : (option)--num_gpus --> default is 1, INTEGER(N --> 5,10,50,...) 
-9.  epoch for training     : (option)--num_epochs --> 5,10,50,10,200 
-10. Depth for ResNet       : (option)--depth --> default is 50 (can change to 50,101)
-11. Log(validation/testing): (option)--log_dir --> "googlenet_Run-02-12-2018-15:40:00"
-12. Save prections         : (option)--save_predictions --> "predictions.csv" (default) (can specify other file name)
+__1.  Deep neural networks__   : (option)--architecture --> (possible values)  googlenet and resnet 
+__2.  Execution methods__      : train (for training), eval (for validating), inference (for testing) 
+__3.  dataset path prefix__    : (option)--path_prefix  --> ${HOME}/path-to-dataset-folder 
+__4.  Train/validation info__  : (option)--train_info train.txt and (option)--val_info val.txt 
+__5.  Optimizer for DNN__      : (option)--optimizer --> (momentum(default), adam, adadelta, adagrad, rmsprop, sgd) 
+__6.  learning rate policy__   : (option)--policy_type --> (constant, piecewise_linear(default), exponential) 
+__7.  LR Change detials__      : (option)--LR_details --> (19, 30, 44, 53, 0.01, 0.005, 0.001, 0.0005, 0.0001)(default)
+__8.  GPU numbers(Training)__  : (option)--num_gpus --> default is 1, INTEGER(N --> 5,10,50,...) 
+__9.  epoch for training__     : (option)--num_epochs --> 5,10,50,10,200 
+__10. Depth for ResNet__       : (option)--depth --> default is 50 (can change to 50,101)
+__11. Log(validation/testing)__: (option)--log_dir --> "googlenet_Run-02-12-2018-15:40:00"
+__12. Save prections__         : (option)--save_predictions --> "predictions.csv" (default) (can specify other file name)
                            : Save top-n predictions of the networks along with their confidence in the specified file
-13. Weight decay policy    : (option)--WD_policy --> (constant, piecewise_linear(default), exponential) 
-14. WD change details      : (option)--WD_details --> (30, 0.0005, 0.0)(default)
-15. Batch size             : (option)--batch_size --> 128 (default) (can specify other value)
-16. No of Prefectch Images : (option)--num_prefetch --> 2000 (default) (can specify other value)
-17. Shuffle training data  : (option)--shuffle --> TRUE (default) (can change it to false)
-18. Top N accuracy         : (option)--top_n --> 5(default) (specify top n accuracy number) 
-19. Debugging log          : (option)--log_dir --> NONE (default) (can specify Path for saving debugging info & checkpoints)
-20. Log runtime & mem usage: (option)--log_debug_info --> False(default) (can be TRUE)
-21. Maximum snapshot       : (option)--max_to_keep --> 5(default) (Specify Maximum number of snapshot files to keep)
+__13. Weight decay policy__    : (option)--WD_policy --> (constant, piecewise_linear(default), exponential) 
+__14. WD change details__      : (option)--WD_details --> (30, 0.0005, 0.0)(default)
+__15. Batch size__             : (option)--batch_size --> 128 (default) (can specify other value)
+__16. No of Prefectch Images__ : (option)--num_prefetch --> 2000 (default) (can specify other value)
+__17. Shuffle training data__  : (option)--shuffle --> TRUE (default) (can change it to false)
+__18. Top N accuracy__         : (option)--top_n --> 5(default) (specify top n accuracy number) 
+__19. Debugging log__          : (option)--log_dir --> NONE (default) (can specify Path for saving debugging info & checkpoints)
+__20. Log runtime & mem usage__: (option)--log_debug_info --> False(default) (can be TRUE)
+__21. Maximum snapshot__       : (option)--max_to_keep --> 5(default) (Specify Maximum number of snapshot files to keep)
 **************************
 
 **************************
-**Scripts:**\
-1. run.py          : Main python script for DNN, A program to apply different well-known deep learning architectures.
-                   : Ties all scripts together & performs training, validation,& testing of DNN using all scripts/functions
-2. data_loader.py  : Performs data loading using given text files and prepares data for model training.
-3. utils.py        : Utility class for computing averages of loss and accuracies, getting batches for each epoch.
-                   : Determines learning rate policy and optimization algorithm type as per arguments.
-4. common.py       : helper function file for each model training (Contains functions/methods for batch normalization,                          : flatten, max pool, avg pool, fully connected, spatial Convolution etc.)
-5. model.py        : Helper file with necessary methods/functions for simulating model building, training and validation.
-6. alexnet.py      : Alexnet(Caffenet) Implementation (Deep Convolution Network architecture)
-7. googlenet.py    : GoogleNet Implementation (Deep Convolution Network architecture) 
-8. resnet.py       : ResNet-50 and ResNet-101 Implementation (Deep Convolution Network architecture)
+**Scripts:**
+__1. run.py__          : Main python script for DNN, A program to apply different well-known deep learning architectures.
+                       : Ties all scripts together & performs training, validation,& testing of DNN using all                                        scripts/functions
+__2. data_loader.py__  : Performs data loading using given text files and prepares data for model training.
+__3. utils.py__        : Utility class for computing averages of loss and accuracies, getting batches for each epoch.
+                       : Determines learning rate policy and optimization algorithm type as per arguments.
+__4. common.py__       : helper function file for each model training (Contains functions/methods for batch normalization,                          : flatten, max pool, avg pool, fully connected, spatial Convolution etc.)
+__5. model.py__        : Helper file with necessary methods/functions for simulating model building, training & validation.
+__6. alexnet.py__      : Alexnet(Caffenet) Implementation (Deep Convolution Network architecture)
+__7. googlenet.py__    : GoogleNet Implementation (Deep Convolution Network architecture) 
+__8. resnet.py__       : ResNet-50 and ResNet-101 Implementation (Deep Convolution Network architecture)
 **************************
 
 ## PART 2: Investigating various XAI methods (Future Work- Coming soon)
