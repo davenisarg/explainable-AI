@@ -103,10 +103,10 @@ __21. Maximum snapshot__       : (option)--max_to_keep --> 5(default) (Specify M
 **************************
 
 **************************
-**Scripts:**
-__1. run.py__          : Main python script for DNN, A program to apply different well-known deep learning architectures.
-                       : Ties all scripts together & performs training, validation,& testing of DNN using all                                        scripts/functions
-__2. data_loader.py__  : Performs data loading using given text files and prepares data for model training.
+**Scripts:**\
+__1. run.py__          : Main python script for DNN, A program to apply different well-known deep learning architectures.\
+                       : Ties all scripts together & performs training, validation,& testing of DNN using all \                                      scripts/functions\
+__2. data_loader.py__  : Performs data loading using given text files and prepares data for model training. \
 __3. utils.py__        : Utility class for computing averages of loss and accuracies, getting batches for each epoch.
                        : Determines learning rate policy and optimization algorithm type as per arguments.
 __4. common.py__       : helper function file for each model training (Contains functions/methods for batch normalization,                          : flatten, max pool, avg pool, fully connected, spatial Convolution etc.)
