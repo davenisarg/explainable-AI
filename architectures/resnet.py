@@ -7,7 +7,7 @@
 # OS                  : Ubuntu 18.04.1 LTS
 # Kernel              : 4.15.0-39-generic
 # RAM                 : 12 GB
-# CPU model           : Intel® Core i5-3337U CPU @ 1.80GHz
+# CPU model           : Intel Core i5-3337U CPU @ 1.80GHz
 # CPU/Core count      : 4
 # Author information  : Nisarg Dave (nisargd@mtu.edu)
 # Source code license : GPL v3 (https://www.gnu.org/licenses/gpl-3.0.txt)
@@ -45,6 +45,10 @@ def resnetBlock(net, bottleneck, block_filters_internal, block_stride, wd= 0.0, 
 
   filters_in = net.get_shape()[-1]
 
+  # Note: filters_out isn't how many filters are outputed.
+  # That is the case when bottleneck=False but when bottleneck is
+  # True, filters_internal*4 filters are outputted. filters_internal is how many filters
+  # the 3x3 convs output internally.
   m = 4 if bottleneck else 1
   filters_out = m * block_filters_internal
 
@@ -90,8 +94,8 @@ def resnetBlock(net, bottleneck, block_filters_internal, block_stride, wd= 0.0, 
   return tf.nn.relu(net + shortcut)
 
 
-# ResNet-18, ResNet-34, ResNet-50, ResNet-101, ResNet-152
-# Build the model based on the depth specified
+
+# Build the model based on the depth arg
 def resnet(net, num_classes, wd, is_training, transfer_mode, depth):
 
   num_blockes= []
@@ -118,7 +122,7 @@ def resnet(net, num_classes, wd, is_training, transfer_mode, depth):
 
   return getModel(net, num_classes, wd, is_training, num_blocks= num_blocks, bottleneck= bottleneck, transfer_mode= transfer_mode)
 
-# Helper fn
+# a helper function to have a more organized code
 def getModel(net, num_output, wd, is_training, num_blocks=[3, 4, 6, 3],  # defaults to 50-layer network
             bottleneck= True, transfer_mode= False):
 
@@ -144,6 +148,7 @@ def getModel(net, num_output, wd, is_training, num_blocks=[3, 4, 6, 3],  # defau
   with tf.variable_scope('scale5'):
     net = resnetStack(net, num_blocks[3], 2, 512, bottleneck, wd= wd, is_training= is_training)
 
+  # post-net
   net = tf.reduce_mean(net, reduction_indices= [1, 2], name= "avg_pool")
 
   with tf.variable_scope('output'):
