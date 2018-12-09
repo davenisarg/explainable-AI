@@ -12,9 +12,9 @@
 # CPU/Core count      : 4
 # Author information  : Nisarg Dave (nisargd@mtu.edu)
 # Source code license : GPL v3 (https://www.gnu.org/licenses/gpl-3.0.txt)
-# Software/Language   : Python 3.7.0 (https://www.python.org/downloads/release/python-370/)
-# Version             : 3.7.0 (Ubuntu 18.04.1 LTS)
-# Pre-req/Dependency  : Python 3.x.x (with following modules/packages/libraries)
+# Software/Language   : Python 3.5.x (https://www.python.org/downloads/release/python-370/)
+# Version             : 3.5.x (Ubuntu 18.04.1 LTS)
+# Pre-req/Dependency  : Python 3.5.x (with following modules/packages/libraries)
 # Modules             : __future__ package -> absolute_import
 #                     : __future__ package -> division
 #                     : __future__ package -> print_function

@@ -8,13 +8,13 @@
 # OS                  : Ubuntu 18.04.1 LTS
 # Kernel              : 4.15.0-39-generic
 # RAM                 : 12 GB
-# CPU model           : Intel® Core i5-3337U CPU @ 1.80GHz
+# CPU model           : Intel Core i5-3337U CPU @ 1.80GHz
 # CPU/Core count      : 4
 # Author information  : Nisarg Dave (nisargd@mtu.edu)
 # Source code license : GPL v3 (https://www.gnu.org/licenses/gpl-3.0.txt)
-# Software/Language   : Python 3.7.0 (https://www.python.org/downloads/release/python-370/)
-# Version             : 3.7.0 (Ubuntu 18.04.1 LTS)
-# Pre-req/Dependency  : Python 3.x.x (with following modules/packages/libraries)
+# Software/Language   : Python 3.5.x (https://www.python.org/downloads/release/python-370/)
+# Version             : 3.5.x (Ubuntu 18.04.1 LTS)
+# Pre-req/Dependency  : Python 3.5.x (with following modules/packages/libraries)
 # Modules             : __future__ -> absolute_import
 #                     : __future__ -> division
 #                     : __future__ -> print_function
@@ -313,7 +313,7 @@ def main():  # pylint: disable=unused-argument
     parser.add_argument('--batch_size', default= 128, type= int, action= 'store', help= 'The batch size for training, evaluating, or inference')
     parser.add_argument('--num_classes', default= 1000 , type=int, action='store', help= 'The number of classes')
     parser.add_argument('--num_prefetch', default= 2000 , type= int, action= 'store', help= 'The number of pre-fetched images in the training queue, reduce this to consume less RAM')
-    parser.add_argument('--num_epochs', default= 55, type= int, action= 'store', help= 'The number of training epochs')
+    parser.add_argument('--num_epochs', default= 50, type= int, action= 'store', help= 'The number of training epochs')
     parser.add_argument('--path_prefix', default= './', action='store', help= 'the prefix address for images')
     parser.add_argument('--train_info', default= None, action= 'store', help= 'Name of the file containing addresses and labels of training images')
     parser.add_argument('--val_info', default= None, action= 'store', help= 'Name of the file containing addresses and labels of validation images')
