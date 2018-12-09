@@ -9,7 +9,7 @@ Repository contains code for training different architectures of image classific
 2. Code Utilizes the __GPU parellelization__ during training phase.
 3. Code is built for running on __[High-Performance Computing(Super Computing) Infrastructure](https://en.wikipedia.org/wiki/Supercomputer)__.
 4. Completely designed, by performing all necessary validation checks.
-5. Compatible with both Python 2.7 and Python 3.6
+5. Compatible with both Python 3.5.x and Python 3.6.x (tested)
 6. Code has personalization for selecting optimization algorithm, learning rate and weight decay policies\
 7. Code can build various architectures in optimized manner
 8. Code Supports full automation for training, validation and testing phase.
