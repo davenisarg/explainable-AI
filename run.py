@@ -28,9 +28,9 @@
 # Compilation command : NA
 # Compilation time    : NA (depends of size of data)
 # Execution command   :
-# for Training        : python run.py train --architecture googlenet --path_prefix /home/nisargd/research/nisargd/dataset/ --train_info train.txt --optimizer adam --num_epochs 5 --num_gpus 25
-# for Validation      : python run.py eval --architecture googlenet --log_dir "googlenet_Run-02-12-2018-15:40:00" --path_prefix /path/to/imagenet/train/ --val_info val.txt
-# for Testing         : python run.py inference --architecture googlenet --log_dir "googlenet_Run-02-12-2018-15:40:00" --path_prefix /path/to/imagenet/train/ --val_info val.txt --save_predictions preds.txt
+# for Training        : python -W ignore run.py train --architecture googlenet --path_prefix /home/nisargd/research/nisargd/dataset/ --train_info train.txt --optimizer adam --num_epochs 5 --num_gpus 25
+# for Validation      : python -W ignore run.py eval --architecture googlenet --log_dir "googlenet_Run-02-12-2018-15:40:00" --path_prefix /path/to/imagenet/train/ --val_info val.txt
+# for Testing         : python -W ignore run.py inference --architecture googlenet --log_dir "googlenet_Run-02-12-2018-15:40:00" --path_prefix /path/to/imagenet/train/ --val_info val.txt --save_predictions preds.txt
 # Execution time      : NA (depends of size of data)
 
 # Headers
